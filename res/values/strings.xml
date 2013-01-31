@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, HSmartActivity!</string>
+    <string name="app_name">HSmart</string>
+	<string name="hsmart.update">更新列表</string>
+	<string name="hsmart.about">关于</string>
+	
+	<string-array name="sensor_type">
+	    <item >CMD</item>
+	    <item >DATA</item>	    
+	</string-array>
+	
+</resources>

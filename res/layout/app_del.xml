@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+	
+	<TableLayout 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:stretchColumns="1">
+	
+   	  	<TableRow>
+		    <TextView
+		        android:id="@+id/textView5"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="deviceId" />
+	    	<EditText 
+				android:text="" 
+				android:id="@+id/deviceIdEditText_del"
+				android:layout_width="fill_parent" 
+				android:numeric="integer"
+				android:layout_height="wrap_content" />
+		</TableRow>
+		
+	  	<TableRow>
+		    <TextView
+		        android:id="@+id/textView6"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="sensorId" />
+		    <EditText 
+				android:text="" 
+				android:id="@+id/sensorIdEditText_del"
+				android:layout_width="fill_parent" 
+				android:numeric="integer"
+				android:layout_height="wrap_content" />
+	  	</TableRow>
+	  	
+		<TableRow>
+				<TextView android:text="" />
+				<TextView android:text="" />
+		</TableRow>
+		
+		<TableRow 
+			android:gravity="right">
+		    <Button
+		        android:text="cancel"
+		        android:id="@+id/cancelButton_del"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+			<Button 
+				android:text="DEL" 
+				android:id="@+id/delButton"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" />
+		</TableRow>
+		
+	</TableLayout>
+</LinearLayout>
