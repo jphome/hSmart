@@ -5,10 +5,13 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 //webView = (WebView)findViewById(R.id.mywebview);
@@ -57,7 +60,15 @@ public class HSmartActivity extends Activity {
 					Toast.makeText(HSmartActivity.this, "login success", Toast.LENGTH_SHORT).show();
 */					
 //					Toast.makeText(HSmartActivity.this, FFMpegPlayer.nativeGetStream(), Toast.LENGTH_SHORT).show();
-					Toast.makeText(HSmartActivity.this, "login success", Toast.LENGTH_SHORT).show();
+//					Toast.makeText(HSmartActivity.this, "login success", Toast.LENGTH_SHORT).show();
+					Toast toast = Toast.makeText(HSmartActivity.this, "亲，恭喜你，登录成功", Toast.LENGTH_LONG);
+					toast.setGravity(Gravity.CENTER,20, 69);
+					LinearLayout linearLayout =(LinearLayout)toast.getView();
+			        ImageView imageView = new ImageView(HSmartActivity.this);
+			        imageView.setImageResource(R.drawable.toast);
+			        linearLayout.addView(imageView,1);
+			        toast.setView(linearLayout);
+			        toast.show();
 					Intent intent = new Intent(HSmartActivity.this, MainMenuActivity.class);
 					
 //					FFMpegPlayer.nativePlay("test", 320, 240);	// while(1) for test jni

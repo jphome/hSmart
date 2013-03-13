@@ -14,14 +14,15 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int light_off=0x7f020001;
-        public static final int light_on=0x7f020002;
-        public static final int light_onn=0x7f020003;
-        public static final int login=0x7f020004;
+        public static final int eagle=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int light_off=0x7f020002;
+        public static final int light_on=0x7f020003;
+        public static final int light_onn=0x7f020004;
         public static final int logo=0x7f020005;
         public static final int switch_off=0x7f020006;
         public static final int switch_on=0x7f020007;
+        public static final int toast=0x7f020008;
     }
     public static final class id {
         public static final int TextView=0x7f060016;

@@ -46,7 +46,7 @@ public class HttpUtil {
 			HttpResponse response = HttpUtil.getHttpResponse(request);
 			// 判断是否请求成功
 			rc = response.getStatusLine().getStatusCode();
-			if(200 == rc) {
+			if(AppConstant.HS_OK == rc) {
 				// 获得返回结果
 				result = EntityUtils.toString(response.getEntity());
 				return result;
@@ -72,7 +72,7 @@ public class HttpUtil {
 			// 获得HttpResponse实例
 			HttpResponse response = HttpUtil.getHttpResponse(request);
 			// 判断是否请求成功
-			if(response.getStatusLine().getStatusCode()==200){
+			if(AppConstant.HS_OK == response.getStatusLine().getStatusCode()){
 				// 获得返回结果
 				result = EntityUtils.toString(response.getEntity());
 				return result;
@@ -90,13 +90,13 @@ public class HttpUtil {
     }
 	
 	// 通过HttpPost发送post请求，返回请求结果
-	public static String queryStringForPost(HttpPost request){
+	public static String queryStringForPost(HttpPost request) {
 		String result = null;
 		try {
 			// 获得HttpResponse实例
 			HttpResponse response = HttpUtil.getHttpResponse(request);
 			// 判断是否请求成功
-			if(response.getStatusLine().getStatusCode()==200){
+			if(AppConstant.HS_OK == response.getStatusLine().getStatusCode()) {
 				// 获得返回结果
 				result = EntityUtils.toString(response.getEntity());
 				return result;
@@ -123,7 +123,7 @@ public class HttpUtil {
 			HttpResponse response = HttpUtil.getHttpResponse(request);			
 			// 判断是否请求成功
 			rc = response.getStatusLine().getStatusCode();
-			if(200 == rc){
+			if(AppConstant.HS_OK == rc) {
 				// 获得返回结果
 				result = true;
 			} else {
