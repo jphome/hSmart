@@ -16,12 +16,12 @@ public class HttpUtil {
 	static int rc;
 	
 	// 通过URL获得HttpGet对象
-	public static HttpGet getHttpGet(String url){
+	public static HttpGet getHttpGet(String url) {
 		HttpGet request = new HttpGet(url);
 		 return request;
 	}
 	// 通过URL获得HttpPost对象
-	public static HttpPost getHttpPost(String url){
+	public static HttpPost getHttpPost(String url) {
 		 HttpPost request = new HttpPost(url);
 		 return request;
 	}
@@ -37,7 +37,7 @@ public class HttpUtil {
 	}
 	
 	// 通过URL发送post请求，返回请求结果
-	public static String queryStringForPost(String url){
+	public static String queryStringForPost(String url) {
 		// 获得HttpPost实例
 		HttpPost request = HttpUtil.getHttpPost(url);
 		String result = null;
@@ -64,7 +64,7 @@ public class HttpUtil {
     }
 	
 	// 通过URL发送get请求，返回请求结果
-	public static  String queryStringForGet(String url){
+	public static  String queryStringForGet(String url) {
 		// 获得HttpGet实例
 		HttpGet request = HttpUtil.getHttpGet(url);
 		String result = null;
@@ -72,18 +72,18 @@ public class HttpUtil {
 			// 获得HttpResponse实例
 			HttpResponse response = HttpUtil.getHttpResponse(request);
 			// 判断是否请求成功
-			if(AppConstant.HS_OK == response.getStatusLine().getStatusCode()){
+			if(AppConstant.HS_OK == response.getStatusLine().getStatusCode()) {
 				// 获得返回结果
 				result = EntityUtils.toString(response.getEntity());
 				return result;
 			}
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();
-			result = "网络异常！";
+			result = "error";
 			return result;
 		} catch (IOException e) {
 			e.printStackTrace();
-			result = "网络异常！";
+			result = "error";
 			return result;
 		}
         return null;
@@ -114,6 +114,7 @@ public class HttpUtil {
     }
 	
 	@SuppressWarnings("finally")
+	// 通过HttpGet发送get请求
 	public static boolean cmdForGet(String url) {
 		boolean result = false;
 		// 获得HttpGet实例
@@ -142,5 +143,21 @@ public class HttpUtil {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

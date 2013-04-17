@@ -2,27 +2,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
   <title>xx</title>
-  <link rel="stylesheet" type="text/css" href="http://192.168.1.168/css/demo.css" />
+  <!--
+  	<link rel="stylesheet" type="text/css" href="http://192.168.1.168/css/demo.css" />
+  -->
 </head>
 
 <!--
 	window.query_entity(param)
 param: 0 -> temperature
-       1 -> light_status
+       1 -> switch_status
 	   2 ->
 	   ...
   -->
 
-<body>
+<body text="green">
   <h1>
 	<a onclick="window.query.entity(0);" >
 	  <img src="file:///android_asset/images/pulse.png" style="vertical-align:middle;" /> Temperature
 	</a>
 	<br />
 	<a onclick="window.query.entity(1);" >
-	  <img src="file:///android_asset/images/pulse.png" style="vertical-align:middle;" /> switch_status
+	  <img src="file:///android_asset/images/pulse.png" style="vertical-align:middle;" /> Switch_Status
 	</a>
 	
   </h1>
 </body>
+
 </html>

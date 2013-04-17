@@ -3,7 +3,7 @@ package jphome.app;
 import jphome.hsmart.R;
 import jphome.hsmart.cmd;
 import jphome.hsmart.gConfig;
-import jphome.sqlite.DBHelper;
+import jphome.utils.DBUtil;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -29,7 +29,7 @@ public class app_del_Activity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.app_del);
 		
-		DBHelper dbHelper = new DBHelper(app_del_Activity.this, gConfig.db_Name, 1);
+		DBUtil dbHelper = new DBUtil(app_del_Activity.this, gConfig.db_Name, 1);
 		dbWriteHandle = dbHelper.getWritableDatabase();
 		
 		delButton = (Button)findViewById(R.id.delButton);

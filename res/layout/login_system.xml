@@ -39,7 +39,6 @@
 			<EditText 
 				android:text=""
 				android:id="@+id/userEditText"
-				android:password="true"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content" >
 			</EditText>

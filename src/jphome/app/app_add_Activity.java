@@ -3,7 +3,7 @@ package jphome.app;
 import jphome.hsmart.R;
 import jphome.hsmart.cmd;
 import jphome.hsmart.gConfig;
-import jphome.sqlite.DBHelper;
+import jphome.utils.DBUtil;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
@@ -32,7 +32,7 @@ public class app_add_Activity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.app_add);
 		
-		DBHelper dbHelper = new DBHelper(app_add_Activity.this, gConfig.db_Name, 1);
+		DBUtil dbHelper = new DBUtil(app_add_Activity.this, gConfig.db_Name, 1);
 		final SQLiteDatabase dbWriteHandle = dbHelper.getWritableDatabase();
 		final ContentValues cv = new ContentValues();
 		

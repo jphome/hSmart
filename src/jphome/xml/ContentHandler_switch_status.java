@@ -6,6 +6,8 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import android.widget.Toast;
+
 public class ContentHandler_switch_status extends DefaultHandler {
 	String count, time, deviceId, sensorId, status;
 	String tagName;
@@ -20,22 +22,28 @@ public class ContentHandler_switch_status extends DefaultHandler {
 		System.out.println("--- end ---");
 		app_query_sub_Activity.html_content += "</div>";
 	}
-	
-	//<abc:name id="dd">Mark</name>
-														// 没有前缀
+
+	// <abc:name id="dd">Mark</name>
+	// 没有前缀
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes attr) throws SAXException {
-			//得到前缀 abc	属性
+		// 得到前缀 abc 属性
 		tagName = localName;
 		if (localName.equals("switch")) {
-			//获取标签的所有属性 属性个数：getLength()			
+			// 获取标签的所有属性 属性个数：getLength()
 			for (int i = 0; i < attr.getLength(); i++) {
 				if (attr.getLocalName(i) == "status") {
 					if (attr.getValue(i).equals("1")) {
-						app_query_sub_Activity.html_content += "<img src=\"file:///android_asset/images/light_on.png\" style=\"vertical-align:right;\" />";
+						app_query_sub_Activity.html_content += "<img src=\"light_on.png\" style=\"vertical-align:right;\" />"
+								+ "<a onclick=\"window.cmd.light(0)\" >"
+								+ "<img src=\"switch_off.png\" alt=\"a ha\" />"
+								+ "</a>";
 						System.out.println("light_on");
 					} else {
-						app_query_sub_Activity.html_content += "<img src=\"file:///android_asset/images/light_off.png\" style=\"vertical-align:right;\" />";
+						app_query_sub_Activity.html_content += "<img src=\"light_off.png\" style=\"vertical-align:right;\" />"
+								+ "<a onclick=\"window.cmd.light(1)\" >"
+								+ "<img src=\"switch_on.png\" alt=\"a ha\" />"
+								+ "</a>";
 						System.out.println("light_off");
 					}
 				} else if (attr.getLocalName(i) == "deviceId") {
@@ -48,39 +56,36 @@ public class ContentHandler_switch_status extends DefaultHandler {
 					tmp += attr.getValue(i);
 					tmp += "</a>";
 					app_query_sub_Activity.html_content += tmp;
-					
+
 					app_query_sub_Activity.html_content += "<br />";
 				}
-//				System.out.println(attr.getLocalName(i) + "=" + attr.getValue(i));
-			}							// 属性名id				 // 属性值dd
+				// System.out.println(attr.getLocalName(i) + "=" +
+				// attr.getValue(i));
+			}
 		}
 	}
 
 	public void endElement(String namespaceURI, String localName, String qName)
 			throws SAXException {
 		tagName = "";
-		//在worker标签解析完之后，会打印出所有得到的数据
+		// 在worker标签解析完之后，会打印出所有得到的数据
 		if (localName.equals("switch")) {
-//			System.out.println("switch end");
-//			this.printout();
+			// System.out.println("switch end");
+			// this.printout();
 		}
 	}
-	//得到标签内容 Mark
+
+	// 得到标签内容 Mark
 	public void characters(char[] ch, int start, int length)
 			throws SAXException {
-		if (tagName.equals("count"))
+		if (tagName.equals("count")) {
 			count = new String(ch, start, length);
-	}
-
-	private void printout() {
-		System.out.print("time: ");
-		System.out.println(time);
-		System.out.print("deviceId: ");
-		System.out.println(deviceId);
-		System.out.print("sensorId: ");
-		System.out.println(sensorId);
-		System.out.print("status: ");
-		System.out.println(status);
-		System.out.println();
+		}
+		System.out.println("count: " + count);
+		if (count.equals("0")) {
+			app_query_sub_Activity.html_content += "</div>";
+			// 中止xml解析
+			throw new SAXException("count值为0");
+		}
 	}
 }

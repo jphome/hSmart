@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>80</x>
+      <y>180</y>
+      <w>50</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>  
+ 
+ 
+ 用户 
+ 触发
+ 请求
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>160</x>
+      <y>180</y>
+      <w>50</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>  
+
+通过
+网络
+向服
+务器
+发送
+HTTP
+请求
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>240</x>
+      <y>180</y>
+      <w>60</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>
+   从
+服务器
+ 获得
+ 反馈
+   ,
+ 返回
+ xml
+ 数据</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>330</x>
+      <y>190</y>
+      <w>50</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>
+ 解析
+ xml
+数据流
+  并
+动态
+构建
+html
+文件</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>410</x>
+      <y>190</y>
+      <w>80</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes> 
+通过
+WebView
+组件加载
+生成的
+html文件
+显示到UI</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>100</x>
+      <y>230</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>60;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>180</x>
+      <y>230</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>60;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>270</x>
+      <y>230</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>60;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>230</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>60;30;30;30</additional_attributes>
+  </element>
+</diagram>

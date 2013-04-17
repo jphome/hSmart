@@ -1,7 +1,6 @@
 package jphome.app;
 
 import jphome.hsmart.R;
-import jphome.hsmart.gConfig;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,39 +13,53 @@ public class app_query_Activity extends Activity {
 
 	private WebView webView;
 	private Handler mHandler = new Handler();
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.app_query);
-		
-		webView = (WebView)findViewById(R.id.webview_query);
-//		webView.setBackgroundColor(0);
+
+		webView = (WebView) findViewById(R.id.webview_query);
+		// webView.setBackgroundColor(89);
 		webView.getSettings().setJavaScriptEnabled(true);
-		
+
 		// 将一个java对象绑定到javascript中 用window.demo.clickOnAndroid()调用
 		webView.addJavascriptInterface(new Object() {
 			public void entity(final byte type) {
 				mHandler.post(new Runnable() {
+					Intent intent;
+
 					public void run() {
 						String url_base = null;
-						switch(type) {
+						switch (type) {
 						case QUERY_TEMPERATURE:
 							/* http://www.monitor.com:8081/query_temperature */
 							url_base = "query_temperature";
+
+							intent = new Intent(app_query_Activity.this,
+									app_query_temperature_Activity.class);
+							startActivity(intent);
 							break;
 						case QUERY_LIGHT_STATUS:
 							/* http://www.monitor.com:8081/query_light_status */
 							url_base = "query_switch_status";
+
+							intent = new Intent(app_query_Activity.this,
+									app_query_sub_Activity.class);
+							intent.putExtra("url_base", url_base);
+							startActivity(intent);
 							break;
 						default:
-							return ;
+							return;
 						}
-						
-						Intent intent = new Intent(app_query_Activity.this, app_query_sub_Activity.class);
-						intent.putExtra("url_base", url_base);
-						startActivity(intent);
+
+						/*
+						 * Intent intent = new Intent(app_query_Activity.this,
+						 * app_query_sub_Activity.class);
+						 * intent.putExtra("url_base", url_base);
+						 * startActivity(intent);
+						 */
 					}
 				});
 			}
@@ -55,15 +68,3 @@ public class app_query_Activity extends Activity {
 		webView.loadUrl("file:///android_asset/html/query.html");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
