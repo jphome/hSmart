@@ -151,9 +151,9 @@ m2=0..n</panel_attributes>
       <x>370</x>
       <y>390</y>
       <w>110</w>
-      <h>50</h>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>sqlite3
+    <panel_attributes>sqlite
 数据库</panel_attributes>
     <additional_attributes/>
   </element>
@@ -187,9 +187,9 @@ m2=0..n</panel_attributes>
       <x>680</x>
       <y>380</y>
       <w>110</w>
-      <h>50</h>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>sqlite3
+    <panel_attributes>sqlite
 数据库</panel_attributes>
     <additional_attributes/>
   </element>

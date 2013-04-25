@@ -46,27 +46,17 @@ public class HSmartActivity extends Activity {
 		loginBtn.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 
-				// String username = userEditText.getText().toString();
-				// String password = pwdEditText.getText().toString();
-				// if (username.equals("")) {
-				// showDialog("用户名必须填");
-				// return;
-				// }
+				String username = userEditText.getText().toString();
+				String password = pwdEditText.getText().toString();
+				if (username.equals("")) {
+					showDialog("用户名必须填");
+					return;
+				}
 				// if (password.equals("")) {
 				// showDialog("密码必须填");
 				// return;
 				// }
 				// if (true == cmd.login(username, password)) {
-				// Toast.makeText(HSmartActivity.this, "login success",
-				// Toast.LENGTH_SHORT).show();
-				// }
-				
-				// Toast.makeText(HSmartActivity.this,
-				// FFMpegPlayer.nativeGetStream(), Toast.LENGTH_SHORT).show();
-				// Toast.makeText(HSmartActivity.this, "login success",
-				// Toast.LENGTH_SHORT).show();
-				
-				System.out.println("login success");
 				Toast toast = Toast.makeText(HSmartActivity.this, "亲，恭喜你，登录成功",
 						Toast.LENGTH_LONG);
 				toast.setGravity(Gravity.CENTER, 20, 69);
@@ -76,6 +66,28 @@ public class HSmartActivity extends Activity {
 				linearLayout.addView(imageView, 1);
 				toast.setView(linearLayout);
 				toast.show();
+				// } else {
+				// showDialog("   	    password error");
+				// return;
+				// }
+
+				// Toast.makeText(HSmartActivity.this,
+				// FFMpegPlayer.nativeGetStream(), Toast.LENGTH_SHORT).show();
+				// Toast.makeText(HSmartActivity.this, "login success",
+				// Toast.LENGTH_SHORT).show();
+
+				System.out.println("login success");
+
+				// Toast toast = Toast.makeText(HSmartActivity.this,
+				// "亲，恭喜你，登录成功",
+				// Toast.LENGTH_LONG);
+				// toast.setGravity(Gravity.CENTER, 20, 69);
+				// LinearLayout linearLayout = (LinearLayout) toast.getView();
+				// ImageView imageView = new ImageView(HSmartActivity.this);
+				// imageView.setImageResource(R.drawable.toast);
+				// linearLayout.addView(imageView, 1);
+				// toast.setView(linearLayout);
+				// toast.show();
 
 				// 后台开启一个独立线程service
 				// Intent service = new Intent();
@@ -90,9 +102,6 @@ public class HSmartActivity extends Activity {
 				// test jni
 
 				startActivity(intent);
-				/*
-				 * }else{ showDialog("   	    password error"); }
-				 */
 			}
 		});
 	}

@@ -20,9 +20,12 @@ public final class R {
         public static final int light_on=0x7f020003;
         public static final int light_onn=0x7f020004;
         public static final int logo=0x7f020005;
-        public static final int switch_off=0x7f020006;
-        public static final int switch_on=0x7f020007;
-        public static final int toast=0x7f020008;
+        public static final int power_activated=0x7f020006;
+        public static final int power_off=0x7f020007;
+        public static final int power_on=0x7f020008;
+        public static final int switch_off=0x7f020009;
+        public static final int switch_on=0x7f02000a;
+        public static final int toast=0x7f02000b;
     }
     public static final class id {
         public static final int TextView=0x7f060017;
@@ -31,7 +34,6 @@ public final class R {
         public static final int cancelButton=0x7f06001a;
         public static final int cancelButton_add=0x7f060008;
         public static final int cancelButton_del=0x7f06000f;
-        public static final int cmd_Button=0x7f06001f;
         public static final int delButton=0x7f060010;
         public static final int del_Button=0x7f06001d;
         public static final int deviceIdEditText_add=0x7f060001;
@@ -39,7 +41,7 @@ public final class R {
         public static final int editVideoIP=0x7f060014;
         public static final int editVideoPort=0x7f060015;
         public static final int loginButton=0x7f06001b;
-        public static final int mywebview=0x7f060022;
+        public static final int mywebview=0x7f060021;
         public static final int nameAddEditText=0x7f060007;
         public static final int pwdEditText=0x7f060019;
         public static final int query_Button=0x7f06001e;
@@ -55,8 +57,8 @@ public final class R {
         public static final int textView6=0x7f06000d;
         public static final int typeSpinner=0x7f060005;
         public static final int userEditText=0x7f060018;
-        public static final int videoSrufaceView=0x7f060021;
-        public static final int video_Button=0x7f060020;
+        public static final int videoSrufaceView=0x7f060020;
+        public static final int video_Button=0x7f06001f;
         public static final int webview_cmd=0x7f06000a;
         public static final int webview_query=0x7f060011;
         public static final int webview_query_sub=0x7f060012;

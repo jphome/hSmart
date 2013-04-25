@@ -15,7 +15,7 @@
         android:layout_width="match_parent" 
         android:id="@+id/editVideoIP" 
         android:layout_height="wrap_content" 
-        android:text="192.168.1.1" >
+        android:text="192.168.1.2" >
     </EditText>
     
     <TextView 

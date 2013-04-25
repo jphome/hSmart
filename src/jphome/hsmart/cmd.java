@@ -43,19 +43,18 @@ public class cmd {
 		}
 	}
 
-	public static void light(byte status, byte light_num) {
+	public static void light(String deviceId, String sensorId, byte status) {
 		url = gConfig.URL.BASE_URL + "cmd_light?status=";
 		switch (status) {
 		case 1:
-			url += "on";
-			System.out.println(url);
+			url += "on";			
 			break;
-		case 0:
-			System.out.println(url);
+		case 0:			
 			url += "off";
 			break;
 		}
-		url += "&light_num=" + light_num;
+		url += "&deviceId=" + deviceId;
+		url += "&sensorId=" + sensorId;
 		System.out.println("url: " + url);
 		rc = HttpUtil.cmdForGet(url);
 		if (false == rc) {

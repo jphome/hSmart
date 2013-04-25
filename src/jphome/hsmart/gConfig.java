@@ -10,6 +10,6 @@ public interface gConfig {
 	
 	public class URL {
 		public static final String BASE_URL = "http://192.168.1.168:8081/";
-		public static final String VIDEO_URL = "http://192.168.1.1:8080/?action=snapshot";
+		public static final String VIDEO_URL = "http://192.168.1.2:8080/?action=snapshot";
 	}
 }

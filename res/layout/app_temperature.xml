@@ -6,6 +6,7 @@
 
     <LinearLayout
         android:id="@+id/query_chart"
+        android:background="@android:color/white"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_x="12dp"
